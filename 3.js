@@ -1,25 +1,23 @@
-var value = [107, 1, -4, 's', 'a',
-    0, -77
-];
+// var value = [1, 2, 3, 4, 5, 6];
+//var value = "bukan array nih"
+//var value = [1, 2];
+var value = [107, 1, -4, 'a', 'true', 0, -77];
 
 function chechk(value) {
     if (Array.isArray(value)) {
         if (value.length >= 3) {
             var p = value.length - 3;
             var a = value.sort();
-            console.log(a);
+            // console.log(a);
             var ab = parseInt(a);
             var q = a[p];
             return q;
         } else {
-            return "array kurang dari 3";
+            return "Minimal array length is 3!";
         }
     } else {
-        return "bukan array";
+        return "Parameter should be an array!";
     }
 }
-
-
-
 
 console.log(chechk(value));
