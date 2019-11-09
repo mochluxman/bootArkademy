@@ -1,5 +1,5 @@
 var username = 'lukman';
-var password = '22@kademy';
+var password = '22&kademy';
 
 
 function validasi(username) {
@@ -14,7 +14,8 @@ console.log(validasi(username));
 
 function validasiPass(password) {
     var pass = password.substr(0, 2);
-    if (pass == parseInt(pass)) {
+    var pass2 = password.substr(2, 1);
+    if (pass == parseInt(pass) && (pass2 == '@' || pass2 == '&')) {
         return true;
     } else {
         return false;
